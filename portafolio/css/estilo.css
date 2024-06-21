@@ -1,0 +1,863 @@
+/* programacion de todo el documento en css */
+
+
+
+.si1,.no1,.si,.no{
+	display: none;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Fredoka One', cursive;
+
+	
+}
+body {
+
+}
+
+/* maquetado de pantalla comun */
+/*encabezado*/
+header{
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background:  #0036FF ;
+	
+	height: 80px;
+	position: fixed;
+	z-index: 100;
+ width: 100%;
+
+}
+header h1{
+	color:#FFF000;
+    
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.5s;
+	}
+	h1{
+		width: 300px;
+		margin-right: 10px;
+		display: inline-block;
+	}
+
+header nav{
+font-size: 20px;
+	float: right;
+	margin-left: 70px;
+	width: 900px;
+	
+
+}
+header nav a{
+	
+	color:#FFF000;
+
+	float: right;
+	text-decoration: none;
+}
+
+header nav ul{
+	
+	float: left;
+	width: 800px;
+	list-style-type: none;
+
+
+border-radius: 15px;
+
+}	/*animacion del css en pantalla de pc horizontal */
+@keyframes despliegue {
+  from {width: 0px;}
+  to {width: 120px;}
+}
+
+header nav ul li {
+	color: none;
+text-align: center;
+	float:left;
+	width: 120px;
+	
+
+margin-bottom: 20px;
+ animation-name: despliegue;
+  animation-duration: 1s;
+}
+header nav ul li:hover{
+	font-size: 15px;
+	 background: rgba(255, 255, 255, 0.2) ;
+	 height: 50px;
+	 border-radius: 20%;
+
+}
+/*fin de encabezado y principio de las secciones*/
+
+
+  .active {
+      background-color: rgba(255, 0, 0, 0.5);
+      transition: background-color 2s ease;
+    }
+    
+#primera{
+	margin-top: 30px;
+	position: relative;
+z-index: 50;
+}
+#presentar{
+	width: 900px;
+	height: auto;
+	background-color: #0036FF ;
+	margin-left: auto;
+	margin-right: auto;
+	column-count: 2;
+    color:#FFF000;
+	border-radius: 10px;
+	border: 4px solid #000000;
+	padding: 10px;
+
+}
+
+#caja1{
+	margin-bottom: 200px;
+	margin-top: 200px;
+
+	
+
+}
+#presentar{
+	position: relative;
+	z-index: 100;
+}
+#img{
+	width: 80%;
+	border-radius: 50%;
+	padding: 25px
+}
+ #caja1 button{
+	padding:10px;
+	border-radius: 10px;
+	background-color: ;
+}
+
+
+/* tablas academicas */
+#segunda{
+	
+	height: 500px;
+	width: 100%;
+	margin-bottom: 100px;
+	 animation: aparecer 2s forwards;
+}
+.tabla {
+ 
+  animation: aparecer 2s forwards;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#tablas{
+ width: 60%;
+   margin-right: auto;
+   margin-left: auto;
+	height: 100px;
+	
+	
+}
+
+
+.cabeza h3,input ,h4{
+
+	display: inline-block;
+	margin-right: 10px;
+}
+#botonera{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	margin-bottom: 50px;
+	background-color: #0036FF ;
+	color: #ffff00;
+	 border-radius: 10px;
+	border: 4px solid #000000;
+}
+#botonera input{
+margin: 0px 20px;
+}
+#carrera,#cursos{
+	
+margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+
+	width: 500px;
+}
+ 
+
+.tabla td{
+	padding: 10px;
+    color: #df01a5;
+    border: 4px solid #000000;
+  background-color:#FFFF00;
+
+	}
+.tabla th{
+	padding-left: 10px; 
+	border: 4px solid #000000;
+	background-color: #0036FF ;
+	color:#FFF000;
+}
+div .algo{
+	color:#FFF000;
+	background-color: #0036FF ;
+	text-align: center;
+}
+
+/*tercera parte de la estructura  */
+#tercera{
+	height: 700px;
+	width: 100%;
+	
+
+}
+/*#programas,#cuadro{
+	margin-left: 80px;
+	float: left;
+margin-bottom: 20px;
+	
+}*/
+
+#programas{
+	color:#FFF000;
+margin-left: auto;
+	margin-right: auto;
+	
+	border-radius: 3px;
+	
+	background-color: #0036FF ;
+		width: 800px;
+	height: 500px;
+	 border-radius: 10px;
+	border: 4px solid #000000;
+	
+}
+#conjunto{
+	display: flex;
+	
+
+}
+#texto{
+	
+	width: 400px;
+	height:400px;
+	padding: 20px;
+
+}
+#academica h5{
+	text-align: center; 
+}
+
+/* manejo caja de bootstra  del caroussel*/
+#cuadro{
+	background-color: #0036FF ;
+	width: 500px;
+	height: 500px;
+ 
+	
+	border: 4px solid #000000;
+	border-radius: 10px;
+	
+}
+
+
+#logotipo{
+	
+	width: 50%;
+	height: 450px;
+	overflow: auto;
+
+}
+#logotipo::-webkit-scrollbar{
+	width: 8px;
+	
+}
+#logotipo::-webkit-scrollbar-thumb {
+ background: rgba(255, 255, 0, 0.1) ;
+  opacity: 10%;
+  
+  border-radius: 50px;
+}
+#logotipo::-webkit-scrollbar-thumb:hover {
+ background: rgba(255, 255, 0, 0.5) ;
+ 
+}
+
+.logo{
+	width: 70%;
+	padding-left: 75px;
+	padding-bottom: 30px;
+}
+.logo:hover{
+	width: 65%;
+}
+#col3{
+	background-color: #0036FF ;
+}
+
+#cuadrodein{
+	 
+	width: 100%;
+  height: 100%;
+ 
+  display: none;
+  position: relative;
+  top:0px;
+  bottom: 0px;
+	z-index: 10;
+}
+.ficture{
+	display: none;
+}
+
+.close{
+padding: 25px;
+	color:#aaa;
+	float: left;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover,.close:focus{
+	color:#black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal, #modal2 {
+  
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+form span{
+	display: line;
+	background-color: red;
+}
+ form .rating{
+ padding: 0px 10px;
+ text-align: center;
+
+ width: 80%;
+ }
+
+#cuadrodeinteraccion{
+	background-color: pink;
+}
+form{
+	padding: 10px;
+
+	width: 65%;
+	height: 500px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #DF01A5;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	border-radius: 5px;
+		border: 4px solid #000000;
+	color: #fff000;
+
+}
+#c{
+text-align: center;
+}
+#c1{
+	padding: 15px 10px;
+	background-color:#DF01A5 ;
+	color: #fff000 ;
+	border: 2px solid #000000;
+	border-radius: 5px;
+
+}
+/* formulario de critica*/
+form h5{
+	
+	font-size: 17px;
+	
+	padding-left: 8px;
+}
+
+
+#texta{
+	height: 200px;
+
+}
+#subir{
+	background-color: green;
+	width: 100%;
+	margin-top: 30px;
+}
+/*#texta,{
+	width: 94%;
+	float: right;
+	margin: 10px;
+	color: #FFF000;
+	background-color: #0036FF ;
+	
+ 
+}*/
+#texta{
+	background-color: white;
+	padding: 5px;
+}
+#nombre,#email,#texta,#asunto{
+	padding: 5px;
+	border-top: none;
+  border-right:none;
+  border-bottom: solid;
+  border-left: none;
+  border-bottom: 2px solid #FFF000;
+  color: blue;
+}
+
+
+#nombre:focus,#email:focus,#texta:focus{
+	
+	color: #000000;
+}
+#nombre,#email,#asunto,#texta{
+background-color: white;
+ margin-top:10px;
+	width: 100%;
+
+
+	
+}
+/*formulario critica*/
+
+
+
+
+/*pie de pagina*/
+
+footer{
+		color:#FFF000;
+	text-align: center;
+	height: 200px;
+	background-color:  #0036FF  ;
+	 	margin-top: 20px;
+	 	padding-bottom: 200 px;
+}
+footer h5{
+	padding-top: 20px;
+	font-size: 30px;
+
+}
+#contacto{
+	padding: 0px;
+}
+#contacto li {
+	margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+text-decoration: none;
+list-style-type: none;
+}
+#contacto li a{
+	color: #fff000;
+}
+#contacto li button{
+list-style-type: none;
+background-color: green;
+color: white;	
+border-radius: 10px;
+margin-top: 8px;
+
+padding: 5px 20px;
+}
+@media all and ( min-width: 740px ) and (max-width: 1270px ){
+	/* seccion mediana de pantalla */
+	/*encabezado */
+	header{
+	width: 100%;
+	
+	height: 150px;
+	}
+
+	header h1{
+		display: block;
+		text-align: center;
+        margin-bottom: 30px;
+        margin-bottom: 0px;
+	}
+	header nav{
+		
+		padding: 5px;
+		 float: none;
+		 margin-right: 0px;
+		 
+		width: 100%;
+		text-align: center;
+
+	} 
+	header nav a{
+		float: left;
+		
+	}
+	header nav ul{
+		width: 100%;
+		
+		
+	}
+	ul{
+		padding-left: 0px;
+	}
+	header nav ul li{
+		width: 16%;
+		
+	}
+	/*secciones de la pagina web mediana todo en porcentajes*/
+    #presentar{
+    	width: 90%;
+   }
+   #primera{
+   	margin-top: 10px;
+   }
+
+	#tercera{
+		height: 600px;
+
+		
+		margin-top: 100px;
+	}
+	
+	#proyectos div{
+		width: 80%;
+		height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	padding-top: 20px;
+} 
+#segunda{
+	height: 600px;
+	padding-top: 0px;
+}
+#tablas{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:90% ;
+	padding: 0px;
+}
+#botonera{
+	width: 30%;
+	text-align: center;
+}
+#carrera, #cursos{
+	margin-left: auto;
+	margin-right: auto;
+	
+	width: 100%;
+	margin-top: 50px;
+
+}
+
+#programas{
+	width: 100%;
+}
+
+#logotipo{
+	
+	width: 50%;
+	
+
+}
+#tercera{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+
+}
+#cuadro,#programas{
+	margin-left: 0px;
+	
+}
+#cuadro{
+	width: 100%;
+	height: 500px;
+	
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+/*#jobbis{
+	margin-top: 100px;
+}*/
+.logo{
+	width: 50%;
+	margin-left: 35px;
+}
+.logo:hover{
+	width: 49%;
+}
+/*#caja3{
+	width: 80%;
+}
+.cajas{
+	width: 100%;
+
+
+}*/
+#img{
+	width: 100%
+}
+form{
+	width: 80%;
+	margin-top: 0px;
+}
+/* pie de pagina pantalla mediana */
+#comentariointer{
+	width: 90%;
+}
+footer{
+	height: 200px;
+		background-color: #DF01A5;
+		padding-bottom:20px;
+
+	}
+}
+
+@media all and (max-width: 739px) {
+	/* principio de pantalla chica y encabezado  */
+
+	header{
+		width: 100%;
+		height: 100px;
+		text-align: center;
+	padding: 0px;
+	 
+
+	}	
+	
+	header h1{
+ padding: 20px;
+	}
+
+
+	
+	header nav{
+
+width: 100%;
+		
+		  
+	}
+
+	
+	header nav ul{
+        
+	width: 100%;
+padding-left: 0px;
+		margin-top: 10px;
+		
+		background-color: #DF01A5;
+
+
+	}
+	header nav ul li{
+		
+		width: 100%;
+		height: 100%;
+		margin-bottom: 5px;
+
+		/*animacion del css en pantalla chica  vertical */
+		
+		 animation-name: despliegue;
+  animation-duration: 0.1s;
+	}
+	@keyframes despliegue {
+  from {height: 0px;}
+  to {height: 24px;}
+}
+
+header nav a{
+	
+		float: none;
+	
+	display: block;
+	text-align: center;
+	
+}  
+/*     secciones de la pagina todo en porcentajes         */
+#presentar{
+    	width: 80%;
+   }
+#primera{
+	
+	
+	margin-right: auto;
+	margin-left: auto ;
+}
+#segunda{
+	height: auto;
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+
+#tablas{
+	
+	padding: 0px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+	
+}
+
+
+#botonera{
+	
+
+	width: 50%;
+	text-align: center;
+}
+#carrera, #cursos{
+
+width: 100%;
+	
+	
+
+}
+
+section #tercera{
+	margin-top: 0px;
+}
+#tercera{
+	margin-top: 0px;
+	height: auto;
+margin-left: auto;
+margin-right: auto;
+}
+#programas,#cuadro{
+	height: auto;
+
+	margin-left: 0px;
+	float: none;
+margin-left: auto;
+margin-right: auto;}
+table{
+	width: 90%;
+}
+
+#cuadro{
+	width: 80%;
+	margin-top: none;
+margin-bottom: none;
+
+}
+#col1{
+	width: 100%;
+}
+#col2{
+	width: 100%;
+}
+
+ 
+
+
+/*#proyectos div{	
+	margin-top: 20px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	
+}*/
+#programas{
+	width: 80%;
+	height: auto;
+}
+#programas,#cuadro{
+	margin-top: 10px;
+	height: auto;
+}
+#texto{
+	height: auto;
+}
+
+#logotipo{
+
+	width: 90%;
+	padding-right: 20px;
+}
+.logo{
+width: 120%;
+float: right;
+}
+.logo:hover{
+	width: 192%;
+}
+/*#caja3{
+	width: 80%;
+}
+.cajas{
+	width: 100%;
+}*/
+form{
+	width: 80%;
+	column-count: 1;
+	height: auto;
+	margin-top: 0px;
+
+
+	
+
+}
+#camentarios{
+	margin-bottom: 200px;
+	width: 80%;
+	height: 300px;
+}
+#critica{
+  margin-top: 50px;
+	height: auto;
+}
+#nombre,#email{
+	width: 100%;
+}
+#texta,#enviar {
+	float:none;
+}
+#comentariointer{
+	width: 80%;
+	height: auto;
+	margin-bottom: 100px;
+
+}
+/* fin pie de pagina  pantalla chica  */
+footer{
+	height: 200px;
+}
+}   
