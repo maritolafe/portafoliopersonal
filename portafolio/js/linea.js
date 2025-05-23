@@ -1,72 +1,35 @@
+// Sección del DOM
+const dato1 = document.querySelectorAll(".dato1"); // En proceso
+const dato2 = document.querySelectorAll(".dato2"); // Terminadas
+const dato3 = document.querySelectorAll(".dato3"); // En proceso
+const dato4 = document.querySelectorAll(".dato4"); // Terminadas
+function actualizarVista() {
+  const terminado = document.getElementById("ct1").checked; // TERMINADA
+  const proceso = document.getElementById("ci1").checked; // EN PROCESO
 
-  const checkbox = document.getElementById('ct1');
-  const elementosTabla = document.querySelectorAll('.si1');
-
-  // Agregar un evento al checkbox
-  checkbox.addEventListener('change', function() {
-    // Iterar sobre los elementos de la tabla
-    elementosTabla.forEach(elemento => {
-      // Verificar si el checkbox está marcado
-      if (checkbox.checked) {
-        // Mostrar los elementos de la tabla
-        elemento.style.display = 'table-cell';
-      } else {
-        // Ocultar los elementos de la tabla
-        elemento.style.display = 'none';
-      }
-    });
-  });
-    const checkbox1 = document.getElementById('ci1');
-  const elementosTabla1 = document.querySelectorAll('.no1');
-
-  // Agregar un evento al checkbox
-  checkbox1.addEventListener('change', function() {
-    // Iterar sobre los elementos de la tabla
-    elementosTabla1.forEach(elemento => {
-      // Verificar si el checkbox está marcado
-      if (checkbox1.checked) {
-        // Mostrar los elementos de la tabla
-        elemento.style.display = 'table-cell';
-      } else {
-        // Ocultar los elementos de la tabla
-        elemento.style.display = 'none';
-      }
-    });
+  // Mostrar u ocultar "en proceso"
+  dato1.forEach((fila) => {
+    fila.style.display = proceso ? "table-row" : "none";
   });
 
-// segunda tabla
-
-  const checkbox2 = document.getElementById('ct');
-  const elementosTabla2 = document.querySelectorAll('.si');
-
-  // Agregar un evento al checkbox
-  checkbox2.addEventListener('change', function() {
-    // Iterar sobre los elementos de la tabla
-    elementosTabla2.forEach(elemento => {
-      // Verificar si el checkbox está marcado
-      if (checkbox2.checked) {
-        // Mostrar los elementos de la tabla
-        elemento.style.display = 'table-cell';
-      } else {
-        // Ocultar los elementos de la tabla
-        elemento.style.display = 'none';
-      }
-    });
+  // Mostrar u ocultar "terminada"
+  dato2.forEach((fila) => {
+    fila.style.display = terminado ? "table-row" : "none";
   });
-    const checkbox3 = document.getElementById('ci');
-  const elementosTabla3 = document.querySelectorAll('.no');
+  document.getElementById("segunda").style.height = "auto";
+}
+function actualizarVista2() {
+  const terminado = document.getElementById("ct").checked; // TERMINADA
+  const proceso = document.getElementById("ci").checked; // EN PROCESO
 
-  // Agregar un evento al checkbox
-  checkbox3.addEventListener('change', function() {
-    // Iterar sobre los elementos de la tabla
-    elementosTabla3.forEach(elemento => {
-      // Verificar si el checkbox está marcado
-      if (checkbox3.checked) {
-        // Mostrar los elementos de la tabla
-        elemento.style.display = 'table-cell';
-      } else {
-        // Ocultar los elementos de la tabla
-        elemento.style.display = 'none';
-      }
-    });
+  // Mostrar u ocultar "en proceso"
+  dato3.forEach((fila) => {
+    fila.style.display = proceso ? "table-row" : "none";
   });
+
+  // Mostrar u ocultar "terminada"
+  dato4.forEach((fila) => {
+    fila.style.display = terminado ? "table-row" : "none";
+  });
+  document.getElementById("segunda").style.height = "auto";
+}
