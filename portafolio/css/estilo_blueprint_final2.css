@@ -1,0 +1,72 @@
+
+/* === CORRECCIÓN DE MENÚ FUNCIONAL === */
+.menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.menu.visible {
+  display: flex;
+}
+
+/* === RESTO DEL CSS ORIGINAL MANTENIDO === */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  background-color: #0a192f;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%),
+    linear-gradient(90deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%);
+  background-size: 60px 60px;
+}
+
+header {
+  background-color: #1c2b4a;
+  border-bottom: 1px dashed #00ffff;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  color: #00ffff;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+#botonMenu, #botonCerrar {
+  background-color: #0a192f;
+  color: #00ffff;
+  border: 1px dashed #00ffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu li {
+  margin: 0 5px;
+}
+
+.menu li a {
+  color: #00ffff;
+  text-decoration: none;
+  border: 1px dashed #00ffff;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}

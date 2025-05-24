@@ -5,7 +5,16 @@
   -->
     <meta charset="utf-8" />
     <title>mariano zalazar</title>
-    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/estilo_blueprint_final.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,24 +35,16 @@
       <h1 id="h1">Mariano Emanuel ZALAZAR</h1>
       <nav>
         <button id="botonMenu" onclick="toggleMenu()">☰ Menú</button>
-        <button id="botonCerrar" onclick="toggleMenu()">✖ Cerrar</button>
+        <button id="botonCerrar" onclick="toggleMenu()" style="display: none">
+          ✖ Cerrar
+        </button>
 
         <ul id="lista" class="menu">
-          <li>
-            <a href="#primera" onclick="mostrarSeccion(this)">Presentación</a>
-          </li>
-          <li>
-            <a href="#segunda" onclick="mostrarSeccion(this)"
-              >Historia académica</a
-            >
-          </li>
-          <li>
-            <a href="#tercera" onclick="mostrarSeccion(this)">Programación</a>
-          </li>
-          <li><a href="#critica" onclick="mostrarSeccion(this)">Mensaje</a></li>
-          <li>
-            <a href="#quinta" onclick="mostrarSeccion(this)">Contactos</a>
-          </li>
+          <li><a href="#primera">Presentación</a></li>
+          <li><a href="#segunda">Historia académica</a></li>
+          <li><a href="#tercera">Programación</a></li>
+          <li><a href="#critica">Mensaje</a></li>
+          <li><a href="#quinta">Contactos</a></li>
           <li><a href="#quinta" onclick="cv()">Mi CV</a></li>
         </ul>
       </nav>

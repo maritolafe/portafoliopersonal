@@ -1,3 +1,4 @@
+/* === BASE ORIGINAL MANTENIDA === */
 /* programacion de todo el documento en css */
 
 * {
@@ -32,70 +33,7 @@ h1 {
   display: inline-block;
 }
 
-#botonMenu,
-#botonCerrar {
-  background-color: #0a192f;
-  color: #00ffff;
-  border: 1px dashed #00ffff;
-  padding: 10px 15px;
-  margin-left: 10px;
-  border-radius: 5px;
-}
-
-/* Ocultar botón de cierre al inicio */
-#botonCerrar {
-  display: none;
-}
-
-/* Corrección funcional para menú dinámico */
-.menu {
-  display: none;
-  flex-direction: column;
-  list-style: none;
-  padding-left: 0;
-}
-
-.menu.visible {
-  display: flex;
-}
-
-.menu.visible {
-  display: flex;
-}
-
-.menu li a {
-  color: #00ffff;
-  border: 1px dashed #00ffff;
-  padding: 6px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.menu li a {
-  color: #fff000;
-  text-decoration: none;
-  display: block;
-}
-.menu li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-#contenedor-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.menu.visible {
-  display: flex;
-}
-
-#botonCerrar {
-  display: none;
-}
-
-/*header nav {
+header nav {
   font-size: 20px;
   float: right;
   margin-left: 70px;
@@ -115,7 +53,7 @@ header nav ul {
 
   border-radius: 15px;
 } /*animacion del css en pantalla de pc horizontal */
-/*@keyframes despliegue {
+@keyframes despliegue {
   from {
     width: 0px;
   }
@@ -123,7 +61,41 @@ header nav ul {
     width: 120px;
   }
 }
+.menu {
+  display: none;
+  flex-direction: row;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  justify-content: center;
+}
 
+.menu.visible {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu li a {
+  color: #00ffff;
+  border: 1px dashed #00ffff;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#botonMenu,
+#botonCerrar {
+  background-color: #0a192f;
+  color: #00ffff;
+  border: 1px dashed #00ffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
 header nav ul li {
   color: none;
   text-align: center;
@@ -185,9 +157,6 @@ header nav ul li:hover {
 }
 
 /* tablas academicas */
-#segunda {
-  margin-bottom: 100px;
-}
 #segunda,
 .tabla {
   animation: aparecer 2s forwards;
@@ -202,21 +171,13 @@ header nav ul li:hover {
 .tabla {
   overflow: visible;
   height: auto; /* ← agregá esta línea */
-  width: 90% !important;
-  max-width: 900px;
-  margin: 0 auto;
-  table-layout: fixed;
 }
 #tablas {
   margin: auto auto;
 }
-table {
-  width: 90%;
-}
 #tabla1,
 #tabla2 {
-  width: 90%;
-  max-width: 900px;
+  width: 50%;
   margin: 0 auto;
 }
 .tabla tr {
@@ -566,9 +527,7 @@ footer h5 {
   #primera {
     margin-top: 10px;
   }
-  #segunda {
-    margin-bottom: 100px;
-  }
+
   #tercera {
     height: 600px;
 
@@ -701,15 +660,6 @@ footer h5 {
 
     animation-name: despliegue;
     animation-duration: 0.1s;
-  }
-  .menu {
-    display: flex !important;
-    flex-direction: row;
-  }
-
-  #botonMenu,
-  #botonCerrar {
-    display: none;
   }
   @keyframes despliegue {
     from {
@@ -862,4 +812,153 @@ footer h5 {
   footer {
     height: 200px;
   }
+}
+
+/* === ESTILO VISUAL BLUEPRINT APLICADO === */
+
+/* Estilo Blueprint / Técnico */
+
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+body {
+  background-color: #0a192f;
+  color: #ffffff;
+  font-family: "Share Tech Mono", monospace;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0.03) 26%,
+      transparent 27%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(255, 255, 255, 0.03) 25%,
+      rgba(255, 255, 255, 0.03) 26%,
+      transparent 27%
+    );
+  background-size: 60px 60px;
+}
+
+header {
+  background-color: #1c2b4a;
+  border-bottom: 1px dashed #00ffff;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  color: #00ffff;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+#botonMenu,
+#botonCerrar {
+  background-color: #0a192f;
+  color: #00ffff;
+  border: 1px dashed #00ffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 10px;
+  max-height: none;
+  background: transparent;
+}
+
+.menu li {
+  margin: 0 5px;
+}
+
+.menu li a {
+  color: #00ffff;
+  text-decoration: none;
+  border: 1px dashed #00ffff;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+section,
+.tabla,
+#programas,
+#cuadro,
+form,
+footer {
+  border: 1px dashed #00ffff;
+  background-color: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 0 10px #00ffff55;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1000px;
+}
+
+.tabla {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 10px;
+}
+
+.tabla th {
+  background-color: #1c2b4a;
+  color: #00ffff;
+  border: 1px dashed #00ffff;
+  padding: 10px;
+}
+
+.tabla td {
+  background-color: #122133;
+  color: #ffffff;
+  border: 1px dashed #00ffff;
+  padding: 10px;
+}
+
+form {
+  color: #ffffff;
+}
+
+#nombre,
+#email,
+#asunto,
+#texta {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #0a192f;
+  border: none;
+  border-bottom: 2px solid #00ffff;
+  color: #ffffff;
+  padding: 8px;
+}
+
+#subir {
+  background-color: #00ffff;
+  color: #0a192f;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #00ffff;
 }
