@@ -17,18 +17,23 @@
         var c12 = document.getElementById('12');
         var c13 = document.getElementById('13');
         var fig=document.getElementsByClassName('ficture')
+        var timeoutId = null; // Variable para controlar el timeout
+
         for (var i = 0; i < logos.length; i++) {
-            logos[i].addEventListener('mouseover', function () {
+            // Función para mostrar información del logo
+            function mostrarInfo(id) {
+                // Limpiar timeout anterior si existe
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+                
                 cuadrito2.style.display = 'none';
-                var id = this.getAttribute('id');
                 cuadroIn.style.display='block';
-                /*texto.textContent = 'Hola, soy el id=' + id;*/
                  for (var j = 0; j < fig.length; j++) {
                     fig[j].style.display = 'none';
                         }
                 switch (id) {
                     case 'c':
-
                         c1.style.display = 'block';
                         break;
                     case 'javascript':
@@ -68,14 +73,47 @@
                         c13.style.display = 'block';
                         break;
                     default:
-                        // Default case, do nothing or handle as needed
                         break;
                 }
+            }
+
+            // Función para ocultar información
+            function ocultarInfo() {
+                cuadroIn.style.display = 'none';
+                cuadrito2.style.display = 'block';
+            }
+
+            // Eventos para desktop (mouse)
+            logos[i].addEventListener('mouseover', function () {
+                var id = this.getAttribute('id');
+                mostrarInfo(id);
             });
 
             logos[i].addEventListener('mouseout', function () {
-                cuadroIn.style.display = 'none';
-                cuadrito2.style.display = 'block';
+                // Ocultar después de 5 segundos cuando sale el cursor
+                timeoutId = setTimeout(ocultarInfo, 5000);
+            });
+
+            // Eventos para móvil (touch)
+            logos[i].addEventListener('touchstart', function (e) {
+                e.preventDefault();
+                var id = this.getAttribute('id');
+                mostrarInfo(id);
+            });
+
+            logos[i].addEventListener('touchend', function (e) {
+                e.preventDefault();
+                // Ocultar después de 8 segundos (5 + 3) en móvil
+                timeoutId = setTimeout(ocultarInfo, 8000);
+            });
+
+            // Evento click para móvil
+            logos[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                var id = this.getAttribute('id');
+                mostrarInfo(id);
+                // Ocultar después de 8 segundos (5 + 3) en móvil
+                timeoutId = setTimeout(ocultarInfo, 8000);
             });
         }
 

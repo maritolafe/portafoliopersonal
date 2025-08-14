@@ -5,15 +5,8 @@
   -->
     <meta charset="utf-8" />
     <title>mariano zalazar</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/estilo_blueprint_final.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <!-- Fuente Monospace nativa del sistema -->
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -34,19 +27,18 @@
   -->
       <h1 id="h1">Mariano Emanuel ZALAZAR</h1>
       <nav>
-        <button id="botonMenu" onclick="toggleMenu()">☰ Menú</button>
-        <button id="botonCerrar" onclick="toggleMenu()" style="display: none">
-          ✖ Cerrar
-        </button>
-
-        <ul id="lista" class="menu">
+        <ul id="lista" class="menu" style="display: none">
           <li><a href="#primera">Presentación</a></li>
-          <li><a href="#segunda">Historia académica</a></li>
+          <li><a href="#segunda">H.académica</a></li>
           <li><a href="#tercera">Programación</a></li>
           <li><a href="#critica">Mensaje</a></li>
           <li><a href="#quinta">Contactos</a></li>
           <li><a href="#quinta" onclick="cv()">Mi CV</a></li>
         </ul>
+        <button id="botonMenu" onclick="toggleMenu()">☰ Menú</button>
+        <button id="botonCerrar" onclick="toggleMenu()" style="display: none">
+          ✖ Cerrar
+        </button>
       </nav>
     </header>
     <section id="primera">
@@ -57,13 +49,13 @@
       <div class="container text-center" id="caja1">
         <div class="row align-items-center" id="presentar">
           <div class="col-4" id="col1">
-            <img id="img" src="foto/perfilf.jpg" alt="foto de perfil" />
+            <img id="img" src="foto/avatar.png" alt="foto de perfil" />
           </div>
           <div class="col-8" id="col2">
             <h2>Hola, soy Mariano Emanuel ZALAZAR</h2>
             <p>
               Soy un apasionado programador web y desarrollador, cadista y
-              constructor mecatrónico de 31 años, originario de Buenos Aires,
+              constructor mecatrónico de 32 años, originario de Buenos Aires,
               Argentina. Actualmente, estoy cursando Ingeniería Mecatrónica en
               la Universidad Nacional de Lomas de Zamora y también soy docente
               técnico.
@@ -113,13 +105,13 @@
                   type="checkbox"
                   name="filtro2"
                   id="ct1"
-                  onchange="actualizarVista()"
+                  onchange="actualizarVistaCarreras()"
                 /><lebel for="ct1">terminada</lebel>
                 <input
                   type="checkbox"
                   name="filtro2"
                   id="ci1"
-                  onchange="actualizarVista()"
+                  onchange="actualizarVistaCarreras()"
                 /><lebel for="ci1">en proceso</lebel>
               </th>
             </tr>
@@ -128,21 +120,7 @@
               <th>establecimiento</th>
               <th>estado</th>
             </tr>
-            <tr class="dato1">
-              <td>ingenieria mecatronica</td>
-              <td>universidad nacional de lomas de zamora</td>
-              <td>en proceso</td>
-            </tr>
-            <tr class="dato2">
-              <td>tramo pedadogico docente</td>
-              <td>universidad nacional de lomas de zamora</td>
-              <td>terminado</td>
-            </tr>
-            <tr class="dato2">
-              <td>tecnico automotor</td>
-              <td>E.E.T N°2 "Maria Eva DUARTE"</td>
-              <td>terminado</td>
-            </tr>
+            <!-- Los datos se cargarán dinámicamente desde JSON -->
           </table>
         </div>
         <div id="tabla2" style="display: none">
@@ -154,13 +132,13 @@
                   type="checkbox"
                   name="filtro2"
                   id="ct"
-                  onchange="actualizarVista2()"
+                  onchange="actualizarVistaCursos()"
                 /><level>terminada</level>
                 <input
                   type="checkbox"
                   name="filtro2"
                   id="ci"
-                  onchange="actualizarVista2()"
+                  onchange="actualizarVistaCursos()"
                 /><level>en proceso</level>
               </th>
             </tr>
@@ -169,285 +147,24 @@
               <th>establecimiento</th>
               <th>estado</th>
             </tr>
-            <tr class="dato3">
-              <td>javascript develooper</td>
-              <td>codo a codo</td>
-              <td>en proceso</td>
-            </tr>
-            <tr class="dato3">
-              <td>solidword basico</td>
-              <td>utn-ba</td>
-              <td>en proceso</td>
-            </tr>
-            <tr class="dato4">
-              <td>java develooper</td>
-              <td>codo a codo</td>
-              <td>terminado</td>
-            </tr>
-            <tr class="dato4">
-              <td>diplomatura web-diveloper</td>
-              <td>universidad tecnogica nacional- resitencia</td>
-              <td>terminado</td>
-            </tr>
-            <tr class="dato4">
-              <td>programacion javascript</td>
-              <td>universidad nacional de lomas de zamora</td>
-              <td>terminado</td>
-            </tr>
-            <tr class="dato4">
-              <td>programacion IA-GOBERNANZA DE DATOS</td>
-              <td>plataforma de wed educativa- ialab</td>
-              <td>terminado</td>
-            </tr>
-            <tr class="dato4">
-              <td>programacion cobol</td>
-              <td>plataforma de wed educativa- itoo</td>
-              <td>terminado</td>
-            </tr>
-            <tr class="dato4">
-              <td>Dibujante proyectista-autocad.</td>
-              <td>universidad nacional de lomas de zamora</td>
-              <td>terminado</td>
-            </tr>
+            <!-- Los datos se cargarán dinámicamente desde JSON -->
           </table>
         </div>
       </div>
     </section>
     <section id="tercera">
-      <div id="programas">
-        <h5 class="algo">stack</h5>
+      <div id="programas" style="background-color: #0a192f">
+        <h5 class="algo2">stack</h5>
         <div id="conjunto">
           <div id="logotipo">
-            <img
-              src="foto/c.png"
-              alt="foto logo de c"
-              id="c"
-              class="logo"
-              title="programacion"
-              onfocus="c();"
-            />
-            <img
-              src="foto/javascript.png"
-              alt="foto logo de javascrit"
-              id="javascript"
-              class="logo"
-              title="programacion from"
-              onfocus="javascript();"
-            />
-            <img
-              src="foto/html.png"
-              alt="foto logo de html5"
-              id="html"
-              class="logo"
-              title="estructura de pagina"
-              onfocus="html();"
-            />
-            <img
-              src="foto/css.png"
-              alt="foto logo de css"
-              id="css"
-              class="logo"
-              title="hojas de estilo"
-              onfocus="css();"
-            />
-            <img
-              src="foto/php2.png"
-              alt="foto logo de php"
-              id="php"
-              class="logo"
-              title=" programacion back-kent"
-              onfocus="php();"
-            />
-
-            <img
-              src="foto/cobol.png"
-              alt="foto logo de cobol"
-              id="cobol"
-              class="logo"
-              title="programacion cobol"
-              onfocus="cobol();"
-            />
-
-            <img
-              src="foto/jquery.png"
-              alt="foto logo de jquery"
-              id="jquery"
-              class="logo"
-              title="fremwork"
-              onfocus="jquery();"
-            />
-            <img
-              src="foto/angular.png"
-              alt="foto logo de angular"
-              id="angular"
-              class="logo"
-              title="fremwork"
-              onfocus="angular();"
-            />
-            <img
-              src="foto/react.png"
-              alt="foto logo de react"
-              id="react"
-              class="logo"
-              title="fremwork"
-              onfocus="react();"
-            />
-            <img
-              src="foto/bootsprap.png"
-              alt="foto logo de bootstrap"
-              id="bootstrap"
-              class="logo"
-              title="fremwork"
-              onfocus="bootstrap();"
-            />
-            <img
-              src="foto/workpress.png"
-              alt="foto logo de workpress"
-              id="wordpress"
-              class="logo"
-              title="workpress cms"
-              onfocus="workpress();"
-            />
-            <img
-              src="foto/sql.png"
-              alt="foto logo de sql"
-              id="sql"
-              class="logo"
-              title="base de datos"
-              onfocus="sql()"
-              ;
-            />
-            <img
-              src="foto/bd2.png"
-              alt="foto logo de bd2"
-              id="bd2"
-              class="logo"
-              title="base de datos"
-              onfocus="bd2()"
-              ;
-            />
+            <!-- Los logos se cargarán dinámicamente desde JSON -->
           </div>
           <div id="texto">
             <div id="cuadrodein">
-              <div id="1" class="ficture">
-                <h5>porgramacion lenguaje c</h5>
-                <p>primer lenguaje en aprender</p>
-                <div
-                  class="progress"
-                  role="progressbar"
-                  aria-label="Warning example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar text-bg-warning" style="width: 75%">
-                    50% dominacion
-                  </div>
-                </div>
-              </div>
-
-              <div id="2" class="ficture">
-                <h5>javascript</h5>
-                <p>
-                  javascript es el lenguaje que mayo uso. En el uso de la pagina
-                  web
-                </p>
-                <div
-                  class="progress"
-                  role="progressbar"
-                  aria-label="Warning example"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                >
-                  <div class="progress-bar text-bg-warning" style="width: 75%">
-                    50% dominacion
-                  </div>
-                </div>
-              </div>
-
-              <div id="3" class="ficture">
-                <h5>Html</h5>
-                <p>
-                  Manejo de de hipertexto de web, lo utilizo hacer 4años empece
-                  en 2020
-                </p>
-              </div>
-
-              <div id="4" class="ficture">
-                <h5>css</h5>
-                <p>aprendizaje justo a html a mismo tiempo</p>
-              </div>
-
-              <div id="5" class="ficture">
-                <h5>php</h5>
-                <p>
-                  Backent unico programa utilizado por ahora del lado del
-                  servidor. en el futuro usare java.
-                </p>
-              </div>
-
-              <div id="6" class="ficture">
-                <h5>cobol</h5>
-                <p>
-                  utilizacion del lenguajes, no lo utilizo mucho pero me siento
-                  como utilizando y aprendo dia a dia
-                </p>
-              </div>
-
-              <div id="7" class="ficture">
-                <h5>jquery</h5>
-                <p>
-                  Tecnologia que utilizo habituamente en ejercicio tipicos de
-                  programacion me gusta utilizar este tipo de tecnologia por su
-                  cintacsis
-                </p>
-              </div>
-              <div id="8" class="ficture">
-                <h5>Angular</h5>
-                <p>
-                  No lo utilizo demaciado lo estoy aprendiendo es algo a
-                  mejorar. pues una tecnologia muy utilizado en el ecosistema de
-                  progemacion.
-                </p>
-              </div>
-              <div id="9" class="ficture">
-                <h5>react</h5>
-                <p>lo utilizo pero no mucho</p>
-              </div>
-              <div id="10" class="ficture">
-                <h5>bootrap</h5>
-                <p>
-                  tecnologia que utilizo bastante. pues es una herramienta
-                  bastante util en diseño
-                </p>
-              </div>
-              <div id="11" class="ficture">
-                <h5>wordpress</h5>
-                <p>
-                  utilizo para hacer tiendas online rapidamente depende de que
-                  quiere el cliente.
-                </p>
-              </div>
-              <div id="12" class="ficture">
-                <h5>SQL</h5>
-                <p>
-                  utilizo esta base de datos para los que son sitios web, es el
-                  que me queda mas comodo.
-                </p>
-              </div>
-              <div id="13" class="ficture">
-                <h5>BD2</h5>
-                <p>utilizada solamente para utilizacion de lenguaje cobol.</p>
-              </div>
+              <!-- Las descripciones se cargarán dinámicamente desde JSON -->
             </div>
             <div id="cuadrito2">
-              <h5>Tecnologias</h5>
-              <p class="pc">
-                este es el stack de tecnologias en que tengo manejo y entiendo,
-                en algunas tecnologias tengo meyor manejo que otras pero tengo
-                una buena curva de aprendisaje en programacion.
-              </p>
+              <!-- La descripción general se cargará dinámicamente desde JSON -->
             </div>
           </div>
         </div>
@@ -537,37 +254,19 @@
             id="nombre"
             name="name"
             placeholder="nombre y apellido"
-            required
           />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email"
-            required
-          />
+          <input type="email" id="email" name="email" placeholder="email" />
 
-          <input
-            type="texta"
-            id="asunto"
-            name="subject"
-            placeholder="asunto"
-            required
-          />
+          <input type="texta" id="asunto" name="subject" placeholder="asunto" />
 
           <textarea
             id="texta"
             placeholder="comentario"
             name="comments"
-            required
           ></textarea>
 
           <input type="submit" id="subir" value="enviar" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://portafoliomez.000webhostapp.com/portafolio/index.html"
-          />
+          <input type="hidden" name="_next" />
           <input type="hidden" name="_captcha" value="false" />
         </form>
       </div>
@@ -597,13 +296,35 @@
     crossorigin="anonymous"
   ></script>
 
-  <script type="text/javascript" src="js/cajas.js"></script>
-  <script type="text/javascript" src="js/cuadro.js"></script>
-  <script type="text/javascript" src="js/curso.js"></script>
-  <script type="text/javascript" src="js/reenvio.js"></script>
-  <script type="text/javascript" src="js/titulo.js"></script>
-  <script type="text/javascript" src="js/linea.js"></script>
-  <script type="text/javascript" src="js/linea2.js"></script>
-  <script type="text/javascript" src="js/menu.js"></script>
+  <script type="text/javascript" src="js/cajas.js" defer></script>
+  <!-- <script type="text/javascript" src="js/cuadro.js"></script> -->
+  <script type="text/javascript" src="js/curso.js" defer></script>
+  <script type="text/javascript" src="js/reenvio.js" defer></script>
+  <script type="text/javascript" src="js/titulo.js" defer></script>
+  <script type="text/javascript" src="js/linea.js" defer></script>
+
+  <script type="text/javascript" src="js/menu.js" defer></script>
+
+  <script type="text/javascript" src="js/ocultar-parrafo.js" defer></script>
+  <script
+    type="text/javascript"
+    src="js/validacion-formulario.js"
+    defer
+  ></script>
+  <script type="text/javascript" src="js/carousel1.js" defer></script>
+  <script
+    type="text/javascript"
+    src="js/cargar-datos-academicos.js"
+    defer
+  ></script>
+  <script type="text/javascript" src="js/cargar-logos.js" defer></script>
+  <!--<script type="text/javascript" src="js/menubinario.js" defer></script>-->
+  <script
+    type="text/javascript"
+    src="js/header-scroll-effect.js"
+    defer
+  ></script>
+  <!--<script type="text/javascript" src="js/menu-matrix.js" defer></script>-->
+  <script type="text/javascript" src="js/dianoche.js" defer></script>
   <!--<script type="text/javascript" src="js/secciones.js"></script>-->
 </html>

@@ -8,8 +8,10 @@ function toggleMenu() {
   if (menu.classList.contains("visible")) {
     abrir.style.display = "none";
     cerrar.style.display = "inline-block";
+    menu.style.display = "block";
   } else {
     abrir.style.display = "inline-block";
     cerrar.style.display = "none";
+    menu.style.display = "none";
   }
 }
