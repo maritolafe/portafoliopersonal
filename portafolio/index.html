@@ -29,11 +29,16 @@
       <nav>
         <ul id="lista" class="menu" style="display: none">
           <li><a href="#primera">Presentación</a></li>
-          <li><a href="#segunda">H.académica</a></li>
+          <!--
+          segunda parte de la secciones se va por diseño  -->
+          <li><a href="#proyecto">proyecto</a></li>
           <li><a href="#tercera">Programación</a></li>
+
           <li><a href="#critica">Mensaje</a></li>
-          <li><a href="#quinta">Contactos</a></li>
-          <li><a href="#quinta" onclick="cv()">Mi CV</a></li>
+
+          <li>
+            <a download="descargar" href="CopiacvMarianozalazar.pdf">Mi CV</a>
+          </li>
         </ul>
         <button id="botonMenu" onclick="toggleMenu()">☰ Menú</button>
         <button id="botonCerrar" onclick="toggleMenu()" style="display: none">
@@ -75,102 +80,6 @@
         </div>
       </div>
     </section>
-    <!--
-
-      segunda parte de la secciones
- conlas tablas de programacion  -->
-    <section id="segunda">
-      <div id="botonera">
-        <input
-          type="checkbox"
-          name="filtro"
-          id="checkcarrera"
-          onchange="cursos()"
-        /><lebel>carrera</lebel>
-        <input
-          type="checkbox"
-          name="filtro"
-          id="checkcurso"
-          onchange="cursos2()"
-        /><lebel>cursos</lebel>
-      </div>
-
-      <div id="tablas">
-        <div id="tabla1" style="display: none">
-          <table id="carrera" class="tabla">
-            <tr>
-              <th colspan="3" class="cabeza">
-                <h3>carrera:</h3>
-                <input
-                  type="checkbox"
-                  name="filtro2"
-                  id="ct1"
-                  onchange="actualizarVistaCarreras()"
-                /><lebel for="ct1">terminada</lebel>
-                <input
-                  type="checkbox"
-                  name="filtro2"
-                  id="ci1"
-                  onchange="actualizarVistaCarreras()"
-                /><lebel for="ci1">en proceso</lebel>
-              </th>
-            </tr>
-            <tr>
-              <th>carreras</th>
-              <th>establecimiento</th>
-              <th>estado</th>
-            </tr>
-            <!-- Los datos se cargarán dinámicamente desde JSON -->
-          </table>
-        </div>
-        <div id="tabla2" style="display: none">
-          <table id="cursos" class="tabla">
-            <tr>
-              <th colspan="3" class="cabeza">
-                <h3>cursos</h3>
-                <input
-                  type="checkbox"
-                  name="filtro2"
-                  id="ct"
-                  onchange="actualizarVistaCursos()"
-                /><level>terminada</level>
-                <input
-                  type="checkbox"
-                  name="filtro2"
-                  id="ci"
-                  onchange="actualizarVistaCursos()"
-                /><level>en proceso</level>
-              </th>
-            </tr>
-            <tr>
-              <th>cursos</th>
-              <th>establecimiento</th>
-              <th>estado</th>
-            </tr>
-            <!-- Los datos se cargarán dinámicamente desde JSON -->
-          </table>
-        </div>
-      </div>
-    </section>
-    <section id="tercera">
-      <div id="programas" style="background-color: #0a192f">
-        <h5 class="algo2">stack</h5>
-        <div id="conjunto">
-          <div id="logotipo">
-            <!-- Los logos se cargarán dinámicamente desde JSON -->
-          </div>
-          <div id="texto">
-            <div id="cuadrodein">
-              <!-- Las descripciones se cargarán dinámicamente desde JSON -->
-            </div>
-            <div id="cuadrito2">
-              <!-- La descripción general se cargará dinámicamente desde JSON -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Sección de Proyectos con Carrusel de Bootstrap -->
     <section id="proyectos" class="container my-5">
       <h2 class="text-center text-primary">Mis Proyectos</h2>
       <div
@@ -233,6 +142,33 @@
         </button>
       </div>
     </section>
+
+    <!-- Sección restaurada: tercera -->
+
+    <!--
+
+      segunda parte de la secciones
+ conlas tablas de programacion se va cambio de diseño  -->
+    <section id="tercera">
+      <div id="programas" style="background-color: #0a192f">
+        <h5 class="algo2">stack</h5>
+        <div id="conjunto">
+          <div id="logotipo">
+            <!-- Los logos se cargarán dinámicamente desde JSON -->
+          </div>
+          <div id="texto">
+            <div id="cuadrodein">
+              <!-- Las descripciones se cargarán dinámicamente desde JSON -->
+            </div>
+            <div id="cuadrito2">
+              <!-- La descripción general se cargará dinámicamente desde JSON -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Proyectos con Carrusel de Bootstrap -->
 
     <section id="critica">
       <div id="c">
@@ -298,11 +234,14 @@
 
   <script type="text/javascript" src="js/cajas.js" defer></script>
   <!-- <script type="text/javascript" src="js/cuadro.js"></script> -->
-  <script type="text/javascript" src="js/curso.js" defer></script>
-  <script type="text/javascript" src="js/reenvio.js" defer></script>
-  <script type="text/javascript" src="js/titulo.js" defer></script>
-  <script type="text/javascript" src="js/linea.js" defer></script>
 
+  <script type="text/javascript" src="js/reenvio.js" defer></script>
+
+  <!--<script type="text/javascript" src="js/linea.js" defer></script>
+
+  <script type="text/javascript" src="js/curso.js" defer></script>
+  -->
+  <script type="text/javascript" src="js/titulo.js" defer></script>
   <script type="text/javascript" src="js/menu.js" defer></script>
 
   <script type="text/javascript" src="js/ocultar-parrafo.js" defer></script>

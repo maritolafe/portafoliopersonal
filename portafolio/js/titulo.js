@@ -1,25 +1,25 @@
- document.addEventListener("DOMContentLoaded", function() {
-            // Capturamos elementos del DOM
-            let animado = document.getElementById("h1");
-            let segunda = document.getElementById("segunda");
-            let primera = document.getElementById("primera");
+document.addEventListener("DOMContentLoaded", function () {
+  // Capturamos elementos del DOM
+  let animado = document.getElementById("h1");
 
-            function mostrarscroll() {
-                let scrolltop = document.documentElement.scrollTop;
-                let altura2 = segunda.offsetTop;
-                let altura1 = primera.offsetTop;
+  let primera = document.getElementById("primera");
 
-                // Verificamos si la posición de desplazamiento es mayor a 300px
-                if (scrolltop > 300) {
-                    animado.style.opacity = 1;
-                } else {
-                    animado.style.opacity = 0;
-                }
-            }
+  function mostrarscroll() {
+    let scrolltop = document.documentElement.scrollTop;
 
-            // Añadimos un listener al evento de scroll y llamamos a la función mostrarscroll
-            window.addEventListener('scroll', mostrarscroll);
+    let altura1 = primera.offsetTop;
 
-            // Llamamos a la función mostrarscroll una vez al inicio para establecer la opacidad inicial
-            mostrarscroll();
-        });
+    // Verificamos si la posición de desplazamiento es mayor a 300px
+    if (scrolltop > 100) {
+      animado.style.opacity = 1;
+    } else {
+      animado.style.opacity = 0;
+    }
+  }
+
+  // Añadimos un listener al evento de scroll y llamamos a la función mostrarscroll
+  window.addEventListener("scroll", mostrarscroll);
+
+  // Llamamos a la función mostrarscroll una vez al inicio para establecer la opacidad inicial
+  mostrarscroll();
+});
